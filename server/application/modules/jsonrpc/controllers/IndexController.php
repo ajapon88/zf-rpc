@@ -7,7 +7,7 @@ class Jsonrpc_IndexController extends Zend_Controller_Action
     {
         $this->_helper->viewRenderer->setNoRender(true);
     
-        $this->server = new Zend_Json_Server;
+        $this->server = new Zend_Json_Server();
         $this->server->setClass('Jsonrpc_Service_Calculator','Calculator');
     }
 
@@ -29,7 +29,5 @@ class Jsonrpc_IndexController extends Zend_Controller_Action
         
         $this->server->handle();
     }
-
-
 }
 
