@@ -38,6 +38,27 @@
             <viewFiltersDirectory/>
           </viewsDirectory>
         </moduleDirectory>
+        <moduleDirectory moduleName="jsonrpc">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Index">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false"/>
+          <modelsDirectory/>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
       </modulesDirectory>
       <viewsDirectory>
         <viewScriptsDirectory>
@@ -87,6 +108,13 @@
         </testApplicationControllerDirectory>
         <testApplicationModulesDirectory>
           <testApplicationModuleDirectory forModuleName="xmlrpc">
+            <testApplicationControllerDirectory>
+              <testApplicationControllerFile forControllerName="Index">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+            </testApplicationControllerDirectory>
+          </testApplicationModuleDirectory>
+          <testApplicationModuleDirectory forModuleName="jsonrpc">
             <testApplicationControllerDirectory>
               <testApplicationControllerFile forControllerName="Index">
                 <testApplicationActionMethod forActionName="index"/>

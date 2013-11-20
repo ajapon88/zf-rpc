@@ -1,10 +1,10 @@
+#include "Http.h"
+
 #include <stdio.h>
 #include <winsock2.h>
 #include <ws2tcpip.h>
 
 #include <sstream>
-
-#include "Http.h"
 
 
 Http::Http(void)
@@ -30,7 +30,7 @@ int Http::extractStatusCode(const char* header)
         if (str.length() <= 0) {
             break;
         }
-        if(str.find_first_not_of("-0123456789 \t") == std::string::npos) {
+        if(str.find_first_not_of("0123456789") == std::string::npos) {
             return atoi(str.c_str());
         }
     }
